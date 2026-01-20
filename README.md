@@ -71,21 +71,27 @@ The program checks user input without blocking, so broadcasting continues smooth
 The parent process:
 
 Creates two pipes
+
 Forks two child processes
+
 Sends song data through pipes
 
 Each listener:
 
 Reads from its pipe (via stdin)
+
 Prints received songs
 
 Signals:
 
 SIGSTOP → Pause listeners
+
 SIGCONT → Resume listeners
+
 SIGTERM → Terminate listeners
 
 select():
+
 Allows checking keyboard input without stopping broadcast
 
 🎵 Songs List (Sample)
